@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Benjie Angeles — Web Developer & Web Designer portfolio."
+    />
+
+    <title>Benjie Angeles | Web Developer & Web Designer</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="./assets/Favicon.png">
+  </head>
+
+  <body>
+    <!-- =========================================================
+         DESKTOP FLOATING NAVIGATION
+    ========================================================== -->
+    <nav class="floating-nav" aria-label="Main navigation">
+      <div class="nav-brand">
+        <img src="./assets/Favicon.png" alt="logo">
+        <!-- <span>BA</span> -->
+      </div>
+
+      <div class="nav-links">
+        <button class="nav-link active" data-section="0">
+          <span class="nav-number">01</span>
+          <span>Home</span>
+        </button>
+
+        <button class="nav-link" data-section="1">
+          <span class="nav-number">02</span>
+          <span>About</span>
+        </button>
+
+        <button class="nav-link" data-section="2">
+          <span class="nav-number">03</span>
+          <span>My Works</span>
+        </button>
+
+        <button class="nav-link" data-section="3">
+          <span class="nav-number">04</span>
+          <span>Timeline</span>
+        </button>
+
+        <button class="nav-link" data-section="4">
+          <span class="nav-number">05</span>
+          <span>Contact</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- =========================================================
+         MOBILE NAVIGATION
+    ========================================================== -->
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="#home" class="mobile-logo">BA</a>
+
+      <div class="mobile-nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- =========================================================
+         MAIN HORIZONTAL EXPERIENCE
+    ========================================================== -->
+    <main class="horizontal-wrapper" id="horizontalWrapper">
+      <!-- =====================================================
+             HOME
+        ====================================================== -->
+      <section
+        class="portfolio-section home-section"
+        id="home"
+        data-index="0"
+        aria-label="Home"
+      >
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="section-content hero-content">
+          <div class="hero-kicker">
+            <span class="status-dot"></span>
+            Available for opportunities
+          </div>
+
+          <p class="hero-eyebrow">WEB DEVELOPER &amp; DESIGNER</p>
+
+          <h1>
+            Benjie
+            <span>Angeles</span>
+          </h1>
+
+          <p class="hero-description">
+            Creating modern, responsive, and engaging digital experiences
+            through web development and design.
+          </p>
+
+
+        <div class="hero-side-label">SCROLL TO EXPLORE</div>
+
+        <div class="hero-corner">
+          <span>01</span>
+          <span>/</span>
+          <span>05</span>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+      <section
+        class="portfolio-section about-section"
+        id="about"
+        data-index="1"
+        aria-label="About"
+      >
+        <div class="section-content about-content">
+          <div class="section-heading">
+            <span class="section-number">02 / 05</span>
+
+            <h2>
+              About
+              <span>Me</span>
+            </h2>
+
+            <p>
+              A continuous journey from software development into modern web
+              design and development.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <!-- ABOUT IMAGE -->
+            <div class="about-image-wrapper">
+              <!--
+                            ABOUT IMAGE:
+                            Replace this URL with your own portrait/image.
+                        -->
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80"
+                alt="Abstract workspace representing web development"
+                class="about-image"
+              />
+
+              <div class="image-label">
+                <span>BA</span>
+                <span>WEB / DEV</span>
+              </div>
+            </div>
+
+            <!-- ABOUT TEXT -->
+            <div class="about-details">
+              <div class="about-copy">
+                <p>
+                  I'm a career shifter who discovered a passion for creating
+                  things on the web. I studied web development through a
+                  bootcamp, which led me to my first role as a Junior Software
+                  Engineer.
+                </p>
+
+                <p>
+                  Since then, I've continued developing my skills through
+                  hands-on experience as a Web Designer, while constantly
+                  learning new technologies and exploring creative ways to solve
+                  problems.
+                </p>
+              </div>
+
+              <!-- SKILLS -->
+              <div class="skills-wrapper">
+                <div class="small-label">TECHNOLOGIES</div>
+
+                <div class="skills-list">
+                  <span class="skill-badge">HTML</span>
+                  <span class="skill-badge">CSS</span>
+                  <span class="skill-badge">JavaScript</span>
+                  <span class="skill-badge">React.js</span>
+                  <span class="skill-badge">Node.js</span>
+                  <span class="skill-badge">MongoDB</span>
+                  <span class="skill-badge">Express.js</span>
+                  <span class="skill-badge">Webflow</span>
+                  <span class="skill-badge">HubSpot</span>
+                  <span class="skill-badge">Power Apps</span>
+                </div>
+              </div>
+
+              <!-- RESUME -->
+              <a
+                href="./assets/Updated CV 2026.pdf"
+                class="primary-button"
+                download
+              >
+                <span>Download Resume</span>
+                <span class="button-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             MY WORKS
+        ====================================================== -->
+      <section
+        class="portfolio-section works-section"
+        id="works"
+        data-index="2"
+        aria-label="My Works"
+      >
+        <div class="section-content works-content">
+          <div class="works-header">
+            <div>
+              <span class="section-number">03 / 05</span>
+
+              <h2>
+                My
+                <span>Works</span>
+              </h2>
+            </div>
+
+            <p>A selection of development, design, and learning projects.</p>
+          </div>
+
+          <div class="work-categories">
+            <!-- =================================================
+                         WEB DEVELOPMENT
+                    ================================================== -->
+            <div class="work-category">
+              <div class="category-heading">
+                <div>
+                  <span class="category-index">01</span>
+                  <h3>Web Development</h3>
+                </div>
+
+                <span class="category-count">06 PROJECTS</span>
+              </div>
+
+              <div class="project-grid">
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+                      alt="Dashboard project preview"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">JavaScript</span>
+                    <h4>Dashboard UI</h4>
+                    <p>Responsive admin dashboard interface.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&q=80"
+                      alt="E-commerce website preview"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">JavaScript</span>
+                    <h4>E-Commerce UI</h4>
+                    <p>Modern shopping experience concept.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+                      alt="Web application preview"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">React</span>
+                    <h4>Web App</h4>
+                    <p>Interactive frontend application.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+                      alt="Developer workspace"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">MERN</span>
+                    <h4>Inventory App</h4>
+                    <p>Business inventory management concept.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
+                      alt="Analytics interface"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Frontend</span>
+                    <h4>Analytics UI</h4>
+                    <p>Clean data visualization interface.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80"
+                      alt="Code editor interface"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">JavaScript</span>
+                    <h4>API Explorer</h4>
+                    <p>API-driven search application concept.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- =================================================
+                         WEB DESIGN
+                    ================================================== -->
+            <div class="work-category">
+              <div class="category-heading">
+                <div>
+                  <span class="category-index">02</span>
+                  <h3>Web Design</h3>
+                </div>
+
+                <span class="category-count">06 PROJECTS</span>
+              </div>
+
+              <div class="project-grid">
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80"
+                      alt="Creative website design"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Webflow</span>
+                    <h4>Creative Studio</h4>
+                    <p>Modern creative agency website.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80"
+                      alt="Business website design"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Web Design</span>
+                    <h4>Business Site</h4>
+                    <p>Professional business website concept.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&q=80"
+                      alt="Landing page design"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">UI Design</span>
+                    <h4>Landing Page</h4>
+                    <p>Conversion-focused landing page.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=600&q=80"
+                      alt="Portfolio website design"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Portfolio</span>
+                    <h4>Portfolio Concept</h4>
+                    <p>Personal portfolio experience.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?auto=format&fit=crop&w=600&q=80"
+                      alt="Corporate website"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Responsive</span>
+                    <h4>Corporate Site</h4>
+                    <p>Responsive corporate website concept.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1559028012-d8abf4e0f6b4?auto=format&fit=crop&w=600&q=80"
+                      alt="Product website design"
+                    />
+                  </div>
+
+                  <div class="project-info">
+                    <span class="project-tag">UX/UI</span>
+                    <h4>Product Website</h4>
+                    <p>Clean product-focused experience.</p>
+                    <a href="#" class="project-link">View ↗</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- =================================================
+                         POWER APPS
+                    ================================================== -->
+            <div class="work-category">
+              <div class="category-heading">
+                <div>
+                  <span class="category-index">03</span>
+                  <h3>Power Apps</h3>
+                </div>
+
+                <span class="category-count">LEARNING</span>
+              </div>
+
+              <div class="project-grid">
+                <article class="project-card coming-soon-card">
+                  <div class="coming-icon">+</div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Coming Soon</span>
+                    <h4>Project 01</h4>
+                    <p>Currently learning Microsoft Power Apps.</p>
+                  </div>
+                </article>
+
+                <article class="project-card coming-soon-card">
+                  <div class="coming-icon">+</div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Coming Soon</span>
+                    <h4>Project 02</h4>
+                    <p>Projects will be added soon.</p>
+                  </div>
+                </article>
+
+                <article class="project-card coming-soon-card">
+                  <div class="coming-icon">+</div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Coming Soon</span>
+                    <h4>Project 03</h4>
+                    <p>Currently studying Power Apps.</p>
+                  </div>
+                </article>
+
+                <article class="project-card coming-soon-card">
+                  <div class="coming-icon">+</div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Coming Soon</span>
+                    <h4>Project 04</h4>
+                    <p>Projects will be added soon.</p>
+                  </div>
+                </article>
+
+                <article class="project-card coming-soon-card">
+                  <div class="coming-icon">+</div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Coming Soon</span>
+                    <h4>Project 05</h4>
+                    <p>Currently studying Power Apps.</p>
+                  </div>
+                </article>
+
+                <article class="project-card coming-soon-card">
+                  <div class="coming-icon">+</div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Coming Soon</span>
+                    <h4>Project 06</h4>
+                    <p>Projects will be added soon.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             TIMELINE
+        ====================================================== -->
+      <section
+        class="portfolio-section timeline-section"
+        id="timeline"
+        data-index="3"
+        aria-label="Timeline"
+      >
+        <div class="section-content timeline-content">
+          <div class="timeline-header">
+            <span class="section-number">04 / 05</span>
+
+            <h2>
+              My
+              <span>Journey</span>
+            </h2>
+
+            <p>
+              From learning the fundamentals to building real-world digital
+              experiences.
+            </p>
+          </div>
+
+          <div class="timeline-grid">
+            <!-- TIMELINE CARD 1 -->
+            <article class="timeline-card timeline-card-large">
+              <div class="timeline-year">2023</div>
+
+              <div class="timeline-card-content">
+                <span class="timeline-label">FEB — JUN</span>
+
+                <h3>
+                  KodeGo
+                  <span>Web Development Bootcamp</span>
+                </h3>
+
+                <p class="timeline-role">Student</p>
+
+                <p>
+                  Started the journey into professional web development through
+                  structured, hands-on learning.
+                </p>
+              </div>
+            </article>
+
+            <!-- TIMELINE CARD 2 -->
+            <article class="timeline-card">
+              <div class="timeline-year">2023</div>
+
+              <div class="timeline-card-content">
+                <span class="timeline-label">NOV 2023</span>
+
+                <h3>
+                  Pulsar Software
+                  <span>Development</span>
+                </h3>
+
+                <p class="timeline-role">Junior Software Engineer</p>
+
+                <p>
+                  Began professional software development experience and
+                  expanded technical skills.
+                </p>
+              </div>
+            </article>
+
+            <!-- TIMELINE CARD 3 -->
+            <article class="timeline-card timeline-current">
+              <div class="timeline-year">2025</div>
+
+              <div class="timeline-card-content">
+                <span class="timeline-label">APR 2025 — PRESENT</span>
+
+                <h3>
+                  Enshored
+                  <span>Philippines</span>
+                </h3>
+
+                <p class="timeline-role">Web Designer</p>
+
+                <p>
+                  Creating and maintaining modern websites while continuing to
+                  grow as a designer and developer.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="timeline-footer">
+            <span>KEEP LEARNING</span>
+            <span class="footer-line"></span>
+            <span>KEEP BUILDING</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+      <section
+        class="portfolio-section contact-section"
+        id="contact"
+        data-index="4"
+        aria-label="Contact"
+      >
+        <div class="contact-glow"></div>
+
+        <div class="section-content contact-content">
+          <div class="contact-top">
+            <span class="section-number">05 / 05</span>
+            <span class="contact-location">PHILIPPINES</span>
+          </div>
+
+          <div class="contact-main">
+            <p class="contact-eyebrow">HAVE A PROJECT IN MIND?</p>
+
+            <h2>
+              Let's
+              <span>Connect.</span>
+            </h2>
+
+            <p class="contact-description">
+              Have a project in mind or want to work together? Let's connect and
+              create something meaningful.
+            </p>
+
+            <div class="contact-links">
+              <a href="mailto:thebenjangeles@gmail.com" class="contact-link">
+                <span class="contact-link-label">EMAIL</span>
+                <span class="contact-link-value">
+                  thebenjangeles@gmail.com
+                </span>
+                <span class="contact-arrow">↗</span>
+              </a>
+
+              <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+              >
+                <span class="contact-link-label">GITHUB</span>
+                <span class="contact-link-value"> github.com/ </span>
+                <span class="contact-arrow">↗</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+              >
+                <span class="contact-link-label">LINKEDIN</span>
+                <span class="contact-link-value"> linkedin.com/ </span>
+                <span class="contact-arrow">↗</span>
+              </a>
+            </div>
+
+            <a href="mailto:thebenjangeles@gmail.com" class="contact-button">
+              Start a conversation
+              <span>↗</span>
+            </a>
+          </div>
+
+          <div class="contact-footer">
+            <span>BENJIE ANGELES</span>
+            <span>WEB DEVELOPER &amp; WEB DESIGNER</span>
+            <span>© 2026</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
