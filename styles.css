@@ -380,7 +380,7 @@ h2 span {
   font-size: clamp(5rem, 10vw, 11rem);
   line-height: 0.78;
 
-  letter-spacing: -0.075em;
+  letter-spacing: -0.05em;
 }
 
 .hero-content h1 span {
