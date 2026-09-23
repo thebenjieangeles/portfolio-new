@@ -688,6 +688,10 @@ h2 span {
   margin-bottom: 23px;
 }
 
+.works-header h2 {
+  font-size: clamp(2rem, 3.5vw, 4rem);
+}
+
 .works-header p {
   max-width: 350px;
 
