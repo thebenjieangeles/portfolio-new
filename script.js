@@ -1,218 +1,163 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const wrapper = document.getElementById("horizontalWrapper");
-  const sections = Array.from(document.querySelectorAll(".portfolio-section"));
+  const sections = document.querySelectorAll(".portfolio-section");
 
-  const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+  const desktopNavLinks = document.querySelectorAll(".nav-link");
 
-  const mobileLinks = Array.from(
-    document.querySelectorAll(".mobile-nav-links a"),
-  );
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-links a");
 
-  let currentSection = 0;
+  const lightbox = document.getElementById("imageLightbox");
 
-  let isScrolling = false;
+  const lightboxImage = document.getElementById("lightboxImage");
 
-  let scrollUnlockTimer = null;
+  const lightboxCaption = document.getElementById("lightboxCaption");
 
-  const TRANSITION_DURATION = 900;
+  const lightboxClose = document.querySelector(".lightbox-close");
 
-  const DESKTOP_BREAKPOINT = 1024;
+  function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
 
-  function isDesktop() {
-    return window.innerWidth > DESKTOP_BREAKPOINT;
+    if (!targetSection) return;
+
+    targetSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   }
 
-  function updateNavigation() {
-    navLinks.forEach((link, index) => {
-      const isActive = index === currentSection;
+  desktopNavLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const sectionId = link.dataset.target;
+
+      scrollToSection(sectionId);
+    });
+  });
+
+  mobileNavLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const sectionId = link.getAttribute("href").substring(1);
+
+      scrollToSection(sectionId);
+    });
+  });
+
+  const mobileLogo = document.querySelector(".mobile-logo");
+
+  mobileLogo?.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    scrollToSection("home");
+  });
+
+  function updateActiveNavigation() {
+    let currentSection = "";
+
+    const scrollPosition = window.scrollY + window.innerHeight * 0.5;
+    const isAtBottom =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 2;
+
+    if (isAtBottom) {
+      currentSection = sections[sections.length - 1].id;
+    } else {
+      sections.forEach((section) => {
+        if (section.offsetTop <= scrollPosition) {
+          currentSection = section.id;
+        }
+      });
+    }
+
+    desktopNavLinks.forEach((link) => {
+      const isActive = link.dataset.target === currentSection;
 
       link.classList.toggle("active", isActive);
 
-      link.setAttribute("aria-current", isActive ? "page" : "false");
-    });
-  }
-
-  function goToSection(index, useLock = true) {
-    if (!isDesktop()) {
-      return;
-    }
-
-    const nextIndex = Math.max(0, Math.min(index, sections.length - 1));
-
-    if (nextIndex === currentSection) {
-      return;
-    }
-
-    if (isScrolling) {
-      return;
-    }
-
-    currentSection = nextIndex;
-
-    wrapper.style.transform = `translateX(-${currentSection * 100}vw)`;
-
-    updateNavigation();
-
-    if (useLock) {
-      isScrolling = true;
-
-      clearTimeout(scrollUnlockTimer);
-
-      scrollUnlockTimer = setTimeout(() => {
-        isScrolling = false;
-      }, TRANSITION_DURATION);
-    }
-  }
-
-  function handleWheel(event) {
-    if (!isDesktop()) {
-      return;
-    }
-
-    if (isScrolling) {
-      event.preventDefault();
-      return;
-    }
-
-    if (Math.abs(event.deltaY) < 8) {
-      return;
-    }
-
-    event.preventDefault();
-
-    if (event.deltaY > 0) {
-      if (currentSection < sections.length - 1) {
-        goToSection(currentSection + 1);
-      }
-    } else {
-      if (currentSection > 0) {
-        goToSection(currentSection - 1);
-      }
-    }
-  }
-
-  window.addEventListener("wheel", handleWheel, {
-    passive: false,
-  });
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      const targetIndex = Number(link.dataset.section);
-
-      if (!isDesktop()) {
-        return;
-      }
-
-      clearTimeout(scrollUnlockTimer);
-
-      isScrolling = false;
-
-      if (targetIndex === currentSection) {
-        updateNavigation();
-        return;
-      }
-
-      currentSection = Math.max(0, Math.min(targetIndex, sections.length - 1));
-
-      wrapper.style.transform = `translateX(-${currentSection * 100}vw)`;
-
-      updateNavigation();
-
-      isScrolling = true;
-
-      scrollUnlockTimer = setTimeout(() => {
-        isScrolling = false;
-      }, TRANSITION_DURATION);
-    });
-  });
-
-  mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (!isDesktop()) {
-        return;
-      }
-
-      event.preventDefault();
-    });
-  });
-
-  window.addEventListener("keydown", (event) => {
-    if (!isDesktop()) {
-      return;
-    }
-
-    if (event.key === "ArrowDown" || event.key === "PageDown") {
-      event.preventDefault();
-
-      if (currentSection < sections.length - 1) {
-        goToSection(currentSection + 1);
-      }
-    }
-
-    if (event.key === "ArrowUp" || event.key === "PageUp") {
-      event.preventDefault();
-
-      if (currentSection > 0) {
-        goToSection(currentSection - 1);
-      }
-    }
-
-    if (event.key === "Home") {
-      event.preventDefault();
-
-      clearTimeout(scrollUnlockTimer);
-
-      isScrolling = false;
-
-      currentSection = 0;
-
-      wrapper.style.transform = "translateX(0)";
-
-      updateNavigation();
-    }
-
-    if (event.key === "End") {
-      event.preventDefault();
-
-      clearTimeout(scrollUnlockTimer);
-
-      isScrolling = false;
-
-      currentSection = sections.length - 1;
-
-      wrapper.style.transform = `translateX(-${currentSection * 100}vw)`;
-
-      updateNavigation();
-    }
-  });
-
-  let resizeTimer;
-
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-
-    resizeTimer = setTimeout(() => {
-      if (!isDesktop()) {
-        wrapper.style.transform = "none";
-
-        clearTimeout(scrollUnlockTimer);
-
-        isScrolling = false;
+      if (isActive) {
+        link.setAttribute("aria-current", "page");
       } else {
-        wrapper.style.transform = `translateX(-${currentSection * 100}vw)`;
+        link.removeAttribute("aria-current");
       }
-    }, 150);
-  });
+    });
 
-  function initialize() {
-    updateNavigation();
+    mobileNavLinks.forEach((link) => {
+      const sectionId = link.getAttribute("href").substring(1);
+      const isActive = sectionId === currentSection;
 
-    if (isDesktop()) {
-      wrapper.style.transform = "translateX(0)";
-    } else {
-      wrapper.style.transform = "none";
-    }
+      link.classList.toggle("active", isActive);
+
+      if (isActive) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
   }
 
-  initialize();
+  window.addEventListener("scroll", updateActiveNavigation);
+  window.addEventListener("resize", updateActiveNavigation);
+
+  updateActiveNavigation();
+
+  const projectImages = document.querySelectorAll(".lightbox-trigger");
+
+  function openLightbox(button) {
+    if (!lightbox || !lightboxImage) return;
+
+    if (typeof lightbox.showModal !== "function") return;
+
+    const image = button.querySelector("img");
+
+    if (!image) return;
+
+    lightboxImage.src = image.currentSrc || image.src;
+
+    lightboxImage.alt = image.alt;
+
+    lightboxCaption.textContent = button.dataset.caption || image.alt;
+
+    lightbox.showModal();
+
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    if (!lightbox || !lightbox.open) return;
+
+    lightbox.close();
+  }
+
+  projectImages.forEach((button) => {
+    button.addEventListener("click", () => {
+      openLightbox(button);
+    });
+  });
+
+  lightboxClose?.addEventListener("click", () => {
+    closeLightbox();
+  });
+
+  lightbox?.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  lightbox?.addEventListener("close", () => {
+    lightboxImage.removeAttribute("src");
+
+    lightboxImage.alt = "";
+
+    lightboxCaption.textContent = "";
+
+    document.body.style.overflow = "";
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox?.open) {
+      closeLightbox();
+    }
+  });
 });

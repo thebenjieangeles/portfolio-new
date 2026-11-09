@@ -6,79 +6,82 @@
 
     <meta
       name="description"
-      content="Benjie Angeles — Web Developer & Web Designer portfolio."
+      content="Benjie Angeles — Web Developer, Web Designer, and Power Apps Developer portfolio."
     />
 
     <title>Benjie Angeles | Web Developer & Web Designer</title>
 
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="./assets/Favicon.png">
+    <link rel="icon" type="image/png" href="./assets/Favicon.png" />
   </head>
 
   <body>
-    <!-- =========================================================
-         DESKTOP FLOATING NAVIGATION
-    ========================================================== -->
+    <!-- =========================================
+       DESKTOP FLOATING NAVIGATION
+  ========================================== -->
+
     <nav class="floating-nav" aria-label="Main navigation">
       <div class="nav-brand">
-        <img src="./assets/Favicon.png" alt="logo">
-        <!-- <span>BA</span> -->
+        <img src="./assets/Favicon.png" alt="Benjie Angeles logo" />
       </div>
 
       <div class="nav-links">
-        <button class="nav-link active" data-section="0">
-          <span class="nav-number">01</span>
+        <a href="#home" class="nav-link active" data-target="home">
           <span>Home</span>
-        </button>
+        </a>
 
-        <button class="nav-link" data-section="1">
-          <span class="nav-number">02</span>
+        <a href="#about" class="nav-link" data-target="about">
           <span>About</span>
-        </button>
+        </a>
 
-        <button class="nav-link" data-section="2">
-          <span class="nav-number">03</span>
-          <span>My Works</span>
-        </button>
+        <a
+          href="#web-development"
+          class="nav-link"
+          data-target="web-development"
+        >
+          <span>Web Development</span>
+        </a>
 
-        <button class="nav-link" data-section="3">
-          <span class="nav-number">04</span>
+        <a href="#web-design" class="nav-link" data-target="web-design">
+          <span>Web Design</span>
+        </a>
+
+        <a href="#power-apps" class="nav-link" data-target="power-apps">
+          <span>Power Apps</span>
+        </a>
+
+        <a href="#timeline" class="nav-link" data-target="timeline">
           <span>Timeline</span>
-        </button>
+        </a>
 
-        <button class="nav-link" data-section="4">
-          <span class="nav-number">05</span>
+        <a href="#contact" class="nav-link" data-target="contact">
           <span>Contact</span>
-        </button>
+        </a>
       </div>
     </nav>
 
-    <!-- =========================================================
-         MOBILE NAVIGATION
-    ========================================================== -->
+    <!-- =========================================
+       MOBILE NAVIGATION
+  ========================================== -->
+
     <nav class="mobile-nav" aria-label="Mobile navigation">
       <a href="#home" class="mobile-logo">BA</a>
 
       <div class="mobile-nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#works">Works</a>
+        <a href="#web-development">Development</a>
+        <a href="#web-design">Design</a>
+        <a href="#power-apps">Power Apps</a>
         <a href="#timeline">Timeline</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
 
-    <!-- =========================================================
-         MAIN HORIZONTAL EXPERIENCE
-    ========================================================== -->
-    <main class="horizontal-wrapper" id="horizontalWrapper">
-      <!-- =====================================================
-             HOME
-        ====================================================== -->
+    <main class="vertical-wrapper">
       <section
         class="portfolio-section home-section"
         id="home"
-        data-index="0"
         aria-label="Home"
       >
         <div class="hero-background"></div>
@@ -101,30 +104,16 @@
             Creating modern, responsive, and engaging digital experiences
             through web development and design.
           </p>
-
-
-        <div class="hero-side-label">SCROLL TO EXPLORE</div>
-
-        <div class="hero-corner">
-          <span>01</span>
-          <span>/</span>
-          <span>05</span>
         </div>
       </section>
 
-      <!-- =====================================================
-             ABOUT
-        ====================================================== -->
       <section
         class="portfolio-section about-section"
         id="about"
-        data-index="1"
-        aria-label="About"
+        aria-label="About Me"
       >
         <div class="section-content about-content">
           <div class="section-heading">
-            <span class="section-number">02 / 05</span>
-
             <h2>
               About
               <span>Me</span>
@@ -137,7 +126,6 @@
           </div>
 
           <div class="about-grid">
-            <!-- ABOUT IMAGE -->
             <div class="about-image-wrapper">
               <img
                 src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80"
@@ -151,7 +139,6 @@
               </div>
             </div>
 
-            <!-- ABOUT TEXT -->
             <div class="about-details">
               <div class="about-copy">
                 <p>
@@ -169,7 +156,6 @@
                 </p>
               </div>
 
-              <!-- SKILLS -->
               <div class="skills-wrapper">
                 <div class="small-label">TECHNOLOGIES</div>
 
@@ -188,7 +174,6 @@
                 </div>
               </div>
 
-              <!-- RESUME -->
               <a
                 href="./assets/Updated CV 2026_.pdf"
                 class="primary-button"
@@ -197,12 +182,14 @@
                 <span>Download My Resume</span>
                 <span class="button-arrow">↗</span>
               </a>
-                            <a
+
+              <a
                 href="./assets/KodeGo Certificate.pdf"
                 class="primary-button"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span>View web development certificate</span>
+                <span>View Web Development Certificate</span>
                 <span class="button-arrow">↗</span>
               </a>
             </div>
@@ -210,37 +197,30 @@
         </div>
       </section>
 
-      <!-- =====================================================
-             MY WORKS
-        ====================================================== -->
       <section
-        class="portfolio-section works-section"
-        id="works"
-        data-index="2"
-        aria-label="My Works"
+        class="portfolio-section works-section web-development-section"
+        id="web-development"
+        aria-label="Web Development Projects"
       >
         <div class="section-content works-content">
           <div class="works-header">
             <div>
-              <span class="section-number">03 / 05</span>
-
               <h2>
-                My
-                <span>Works</span>
+                Web
+                <span>Development</span>
               </h2>
             </div>
 
-            <p>A selection of development, design, and learning projects.</p>
+            <p>
+              Applications and interactive projects built using modern web
+              technologies.
+            </p>
           </div>
 
           <div class="work-categories">
-            <!-- =================================================
-                         WEB DEVELOPMENT
-                    ================================================== -->
             <div class="work-category">
               <div class="category-heading">
                 <div>
-                  <span class="category-index">01</span>
                   <h3>Web Development</h3>
                 </div>
 
@@ -249,303 +229,169 @@
 
               <div class="project-grid">
                 <article class="project-card">
-                  <div class="project-image">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Calculator project screenshot"
+                    data-caption="Calculator - A web-based calculator"
+                  >
                     <img
                       src="./assets/web-development/Calculator.png"
-                      alt="an image of a web based calculator"
+                      alt="Web-based calculator project screenshot"
+                      loading="lazy"
                     />
-                  </div>
+                  </button>
 
                   <div class="project-info">
-                    <span class="project-tag">HTML | CSS | JavaScript</span>
+                    <span class="project-tag"> HTML | CSS | JavaScript </span>
+
                     <h4>Calculator</h4>
-                    <p>A web based calculator</p>
-                    <a href="https://thebenjieangeles.github.io/calculator-project/" target="_blank" class="project-link">View ↗</a>
-                    <a href="#" target="_blank" class="project-link">View GitHub ↗</a>
+
+                    <p>A web-based calculator.</p>
+
+                    <a
+                      href="https://thebenjieangeles.github.io/calculator-project/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      View ↗
+                    </a>
                   </div>
                 </article>
 
                 <article class="project-card">
-                  <div class="project-image">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Checklist project screenshot"
+                    data-caption="Web-based Checklist - An online checklist for quality checking"
+                  >
                     <img
                       src="./assets/web-development/Checklist.png"
-                      alt="a sample image for an online checklist"
+                      alt="Web-based checklist project screenshot"
+                      loading="lazy"
                     />
-                  </div>
+                  </button>
 
                   <div class="project-info">
-                    <span class="project-tag">HTML | CSS | JavaScript | Firebase</span>
-                    <h4>Web based checklist</h4>
-                    <p>An online based checklist to help with our team's quality check
+                    <span class="project-tag">
+                      HTML | CSS | JavaScript | Firebase
+                    </span>
+
+                    <h4>Web-based Checklist</h4>
+
+                    <p>
+                      An online-based checklist to help with our team's quality
+                      check.
                     </p>
-                    <a href="https://thebenjieangeles.github.io/amenitiz-enshored-QA-checklist/checklist/checklist.html" target="_blank" class="project-link">View ↗</a>
-                    <a href="#" target="_blank" class="project-link">View GitHub ↗</a>
+
+                    <a
+                      href="https://thebenjieangeles.github.io/amenitiz-enshored-QA-checklist/checklist/checklist.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      View ↗
+                    </a>
                   </div>
                 </article>
 
                 <article class="project-card">
-                  <div class="project-image">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Drumkit project screenshot"
+                    data-caption="Drumkit - An interactive web-based drumkit"
+                  >
                     <img
                       src="./assets/web-development/Drumkit.png"
-                      alt="An image of a web based drumkit"
+                      alt="Interactive web-based drumkit project screenshot"
+                      loading="lazy"
                     />
-                  </div>
+                  </button>
 
                   <div class="project-info">
-                    <span class="project-tag">HTML | CSS | JavaScript</span>
+                    <span class="project-tag"> HTML | CSS | JavaScript </span>
+
                     <h4>Drumkit</h4>
-                    <p>An interactive web based drumkit</p>
-                    <a href="https://thebenjieangeles.github.io/drum-kit-challenge/" target="_blank" class="project-link">View ↗</a>
-                    <a href="#" target="_blank" class="project-link">View GitHub ↗</a>
+
+                    <p>An interactive web-based drumkit.</p>
+
+                    <a
+                      href="https://thebenjieangeles.github.io/drum-kit-challenge/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      View ↗
+                    </a>
                   </div>
                 </article>
 
                 <article class="project-card">
-                  <div class="project-image">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Music App project screenshot"
+                    data-caption="Music App - A music application using Apple's streaming API"
+                  >
                     <img
                       src="./assets/web-development/Soundtrip.png"
-                      alt="a snippet of an online streaming app"
+                      alt="Music streaming application project screenshot"
+                      loading="lazy"
                     />
-                  </div>
+                  </button>
 
                   <div class="project-info">
-                    <span class="project-tag">HTML | CSS | JavaScript | React.Js</span>
+                    <span class="project-tag">
+                      HTML | CSS | JavaScript | React.js
+                    </span>
+
                     <h4>Music App</h4>
-                    <p>A music streaming app using Apple's streaming API</p>
-  
-                    <a href="https://thebenjieangeles.github.io/music-app/" target="_blank" class="project-link">View ↗</a>
-                    <a href="#" target="_blank" class="project-link">View GitHub ↗</a>
+
+                    <p>A music streaming app using Apple's streaming API.</p>
+
+                    <a
+                      href="https://thebenjieangeles.github.io/music-app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      View ↗
+                    </a>
                   </div>
                 </article>
 
                 <article class="project-card">
-                  <div class="project-image">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Dice Game project screenshot"
+                    data-caption="Dice Game - A simple web-based dice game"
+                  >
                     <img
                       src="./assets/web-development/dice-game.png"
-                      alt="an image of a dice game"
+                      alt="Dice game project screenshot"
+                      loading="lazy"
                     />
-                  </div>
+                  </button>
 
                   <div class="project-info">
-                    <span class="project-tag">HTML | CSS | JavaScript</span>
-                    <h4>Dice game</h4>
-                    <p>A game of dice</p>
-                    <a href="https://thebenjieangeles.github.io/dice-game/" target="_blank" class="project-link">View ↗</a>
-                    <a href="#" target="_blank" class="project-link">View GitHub ↗</a>
-                  </div>
-                </article>
+                    <span class="project-tag"> HTML | CSS | JavaScript </span>
 
-                <!-- <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="#
-                      alt="Code editor interface"
-                    />
-                  </div>
+                    <h4>Dice Game</h4>
 
-                  <div class="project-info">
-                    <span class="project-tag">JavaScript</span>
-                    <h4>API Explorer</h4>
-                    <p>API-driven search application concept.</p>
-                    <a href="#" class="project-link">View ↗</a>
-                  </div>
-                </article> -->
-              </div>
-            </div>
+                    <p>A game of dice.</p>
 
-            <!-- =================================================
-                         WEB DESIGN
-                    ================================================== -->
-            <div class="work-category">
-              <div class="category-heading">
-                <div>
-                  <span class="category-index">02</span>
-                  <h3>Web Design</h3>
-                </div>
-
-                <span class="category-count">06 PROJECTS</span>
-              </div>
-
-              <div class="project-grid">
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="./assets/web-design/Aevum.png"
-                      alt="a snippet of the website built for aevum resort"
-                    />
-                  </div>
-
-                  <div class="project-info">
-                    <span class="project-tag">HubSpot | Amenitiz platform</span>
-                    <h4>Aevum Resort</h4>
-                    <p>A website I designed and built for Aevum Resort.</p>
-                    <a href="https://www.aevumresort.com/en" target="_blank" class="project-link">View ↗</a>
-                  </div>
-                </article>
-
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="./assets/web-design/Quercia.png"
-                      alt="a snippet of the website built for Quercia Retreat"
-                    />
-                  </div>
-
-                  <div class="project-info">
-                    <span class="project-tag">HubSpot | Amenitiz platform</span>
-                    <h4>Quercia Retreat</h4>
-                    <p>A website I designed and built for Quercia Retreat.</p>
-                    <a href="https://www.querciaretreat.com/en" target="_blank" class="project-link">View ↗</a>
-                  </div>
-                </article>
-
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="./assets/web-design/vivre-l-instant.png"
-                      alt="a snippet of the website built for vivre l'instant"
-                    />
-                  </div>
-
-                  <div class="project-info">
-                    <span class="project-tag">HubSpot | Amenitiz platform</span>
-                    <h4>Vivre L'Instant</h4>
-                    <p>A website I designed and built for Vivre L'Instant.</p>
-                    <a href="https://www.vivrelinstant-amboise.com/en" target="_blank" class="project-link">View ↗</a>
-                  </div>
-                </article>
-
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="./assets/web-design/villa-ceci.png"
-                      alt="a snippet of the website built for villa ceci"
-                    />
-                  </div>
-
-                  <div class="project-info">
-                    <span class="project-tag">HubSpot | Amenitiz platform</span>
-                    <h4>Villa Ceci</h4>
-                    <p>A website I designed and built for Villa Ceci.</p>
-                    <a href="https://www.villaceci.it/en" target="_blank" class="project-link">View ↗</a>
-                  </div>
-                </article>
-
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="./assets/web-design/quinta-da-liberdade.png"
-                      alt="a snippet of the website built for quinta da liberdade"
-                    />
-                  </div>
-
-                  <div class="project-info">
-                    <span class="project-tag">HubSpot | Amenitiz platform</span>
-                    <h4>Quinta da Liberdade</h4>
-                    <p>A website I designed and built for Quinta da Liberdade.</p>
-                    <a href="https://www.laquintadaliberdade.pt/en" target="_blank" class="project-link">View ↗</a>
-                  </div>
-                </article>
-
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="./assets/web-design/mtm-rooms.png"
-                      alt="a snippet of the website built for MTM Rooms"
-                    />
-                  </div>
-
-                  <div class="project-info">
-                    <span class="project-tag">HubSpot | Amenitiz platform</span>
-                    <h4>MTM Rooms</h4>
-                    <p>A website I designed and built for MTM Rooms.</p>
-                    <a href="https://www.mtmrooms.com/en" target="_blank" class="project-link">View ↗</a>
-                  </div>
-                </article>
-              </div>
-            </div>
-
-            <!-- =================================================
-                         POWER APPS
-                    ================================================== -->
-            <div class="work-category">
-              <div class="category-heading">
-                <div>
-                  <span class="category-index">03</span>
-                  <h3>Power Apps</h3>
-                </div>
-
-                <span class="category-count">2 Projects</span>
-              </div>
-
-              <div class="project-grid">
-                <article class="project-card">
-                                    <div class="project-image">
-                    <img
-                      src="./assets/power-apps/Phonebook app.jpg"
-                      alt="a snippet of the phonebook application built using Microsoft Power Apps"
-                    />
-                  </div>
-
-                  <div class="project-info">
-                    <span class="project-tag">Microsoft Power Apps | Sharepoint</span>
-                    <h4>Phonebook App</h4>
-                    <p>An app that can store and display phone numbers, Email address, Birthday and save it to sharepoint</p>
-                  </div>
-                </article>
-
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="./assets/power-apps/Flashcard app.jpg"
-                      alt="a snippet of the flashcard application built using Microsoft Power Apps"
-                    />
-                  </div>
-
-                  <div class="project-info">
-                    <span class="project-tag">Microsoft Power Apps | Sharepoint</span>
-                    <h4>Flashcard App</h4>
-                    <p>An app that displays a question that is stored in Sharepoint.</p>
-                  </div>
-                </article>
-
-                <article class="project-card coming-soon-card">
-                  <div class="coming-icon">+</div>
-
-                  <div class="project-info">
-                    <span class="project-tag">Coming Soon</span>
-                    <h4>Project 03</h4>
-                    <p>Currently studying Power Apps.</p>
-                  </div>
-                </article>
-
-                <article class="project-card coming-soon-card">
-                  <div class="coming-icon">+</div>
-
-                  <div class="project-info">
-                    <span class="project-tag">Coming Soon</span>
-                    <h4>Project 04</h4>
-                    <p>Projects will be added soon.</p>
-                  </div>
-                </article>
-
-                <article class="project-card coming-soon-card">
-                  <div class="coming-icon">+</div>
-
-                  <div class="project-info">
-                    <span class="project-tag">Coming Soon</span>
-                    <h4>Project 05</h4>
-                    <p>Currently studying Power Apps.</p>
-                  </div>
-                </article>
-
-                <article class="project-card coming-soon-card">
-                  <div class="coming-icon">+</div>
-
-                  <div class="project-info">
-                    <span class="project-tag">Coming Soon</span>
-                    <h4>Project 06</h4>
-                    <p>Projects will be added soon.</p>
+                    <a
+                      href="https://thebenjieangeles.github.io/dice-game/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      View ↗
+                    </a>
                   </div>
                 </article>
               </div>
@@ -554,19 +400,397 @@
         </div>
       </section>
 
-      <!-- =====================================================
-             TIMELINE
-        ====================================================== -->
+      <section
+        class="portfolio-section works-section web-design-section"
+        id="web-design"
+        aria-label="Web Design Projects"
+      >
+        <div class="section-content works-content">
+          <div class="works-header">
+            <div>
+              <h2>
+                Web
+                <span>Design</span>
+              </h2>
+            </div>
+
+            <p>
+              Websites designed and developed with a focus on visual
+              consistency, usability, and responsive layouts.
+            </p>
+          </div>
+
+          <div class="work-categories">
+            <div class="work-category">
+              <div class="category-heading">
+                <div>
+                  <h3>Web Design</h3>
+                </div>
+
+                <span class="category-count">06 PROJECTS</span>
+              </div>
+
+              <div class="project-grid">
+                <article class="project-card">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Aevum Resort screenshot"
+                    data-caption="Aevum Resort - Website design and development"
+                  >
+                    <img
+                      src="./assets/web-design/Aevum.png"
+                      alt="Aevum Resort website screenshot"
+                      loading="lazy"
+                    />
+                  </button>
+
+                  <div class="project-info">
+                    <span class="project-tag">
+                      HubSpot | Amenitiz Platform
+                    </span>
+
+                    <h4>Aevum Resort</h4>
+
+                    <p>A website I designed and built for Aevum Resort.</p>
+
+                    <a
+                      href="https://www.aevumresort.com/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      View ↗
+                    </a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Quercia Retreat screenshot"
+                    data-caption="Quercia Retreat - Website design and development"
+                  >
+                    <img
+                      src="./assets/web-design/Quercia.png"
+                      alt="Quercia Retreat website screenshot"
+                      loading="lazy"
+                    />
+                  </button>
+
+                  <div class="project-info">
+                    <span class="project-tag">
+                      HubSpot | Amenitiz Platform
+                    </span>
+
+                    <h4>Quercia Retreat</h4>
+
+                    <p>A website I designed and built for Quercia Retreat.</p>
+
+                    <a
+                      href="https://www.querciaretreat.com/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      View ↗
+                    </a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Vivre L'Instant screenshot"
+                    data-caption="Vivre L'Instant - Website design and development"
+                  >
+                    <img
+                      src="./assets/web-design/vivre-l-instant.png"
+                      alt="Vivre L'Instant website screenshot"
+                      loading="lazy"
+                    />
+                  </button>
+
+                  <div class="project-info">
+                    <span class="project-tag">
+                      HubSpot | Amenitiz Platform
+                    </span>
+
+                    <h4>Vivre L'Instant</h4>
+
+                    <p>A website I designed and built for Vivre L'Instant.</p>
+
+                    <a
+                      href="https://www.vivrelinstant-amboise.com/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      View ↗
+                    </a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Villa Ceci screenshot"
+                    data-caption="Villa Ceci - Website design and development"
+                  >
+                    <img
+                      src="./assets/web-design/villa-ceci.png"
+                      alt="Villa Ceci website screenshot"
+                      loading="lazy"
+                    />
+                  </button>
+
+                  <div class="project-info">
+                    <span class="project-tag">
+                      HubSpot | Amenitiz Platform
+                    </span>
+
+                    <h4>Villa Ceci</h4>
+
+                    <p>A website I designed and built for Villa Ceci.</p>
+
+                    <a
+                      href="https://www.villaceci.it/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      View ↗
+                    </a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Quinta da Liberdade screenshot"
+                    data-caption="Quinta da Liberdade - Website design and development"
+                  >
+                    <img
+                      src="./assets/web-design/quinta-da-liberdade.png"
+                      alt="Quinta da Liberdade website screenshot"
+                      loading="lazy"
+                    />
+                  </button>
+
+                  <div class="project-info">
+                    <span class="project-tag">
+                      HubSpot | Amenitiz Platform
+                    </span>
+
+                    <h4>Quinta da Liberdade</h4>
+
+                    <p>
+                      A website I designed and built for Quinta da Liberdade.
+                    </p>
+
+                    <a
+                      href="https://www.laquintadaliberdade.pt/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      View ↗
+                    </a>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge MTM Rooms screenshot"
+                    data-caption="MTM Rooms - Website design and development"
+                  >
+                    <img
+                      src="./assets/web-design/mtm-rooms.png"
+                      alt="MTM Rooms website screenshot"
+                      loading="lazy"
+                    />
+                  </button>
+
+                  <div class="project-info">
+                    <span class="project-tag">
+                      HubSpot | Amenitiz Platform
+                    </span>
+
+                    <h4>MTM Rooms</h4>
+
+                    <p>A website I designed and built for MTM Rooms.</p>
+
+                    <a
+                      href="https://www.mtmrooms.com/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                    >
+                      View ↗
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="portfolio-section works-section power-apps-section"
+        id="power-apps"
+        aria-label="Power Apps Projects"
+      >
+        <div class="section-content works-content">
+          <div class="works-header">
+            <div>
+              <h2>
+                Power
+                <span>Apps</span>
+              </h2>
+            </div>
+
+            <p>
+              Business applications and productivity tools built using Microsoft
+              Power Platform.
+            </p>
+          </div>
+
+          <div class="work-categories">
+            <div class="work-category">
+              <div class="category-heading">
+                <div>
+                  <h3>Microsoft Power Apps</h3>
+                </div>
+
+                <span class="category-count">02 PROJECTS</span>
+              </div>
+
+              <div class="project-grid">
+                <article class="project-card">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Phonebook App screenshot"
+                    data-caption="Phonebook App - Microsoft Power Apps and SharePoint"
+                  >
+                    <img
+                      src="./assets/power-apps/Phonebook app.jpg"
+                      alt="Phonebook application built using Microsoft Power Apps"
+                      loading="lazy"
+                    />
+                  </button>
+
+                  <div class="project-info">
+                    <span class="project-tag">
+                      Microsoft Power Apps | SharePoint
+                    </span>
+
+                    <h4>Phonebook App</h4>
+
+                    <p>
+                      An application that stores and displays phone numbers,
+                      email addresses, and birthdays using SharePoint.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <button
+                    type="button"
+                    class="project-image lightbox-trigger"
+                    aria-label="Enlarge Flashcard App screenshot"
+                    data-caption="Flashcard App - Microsoft Power Apps and SharePoint"
+                  >
+                    <img
+                      src="./assets/power-apps/Flashcard app.jpg"
+                      alt="Flashcard application built using Microsoft Power Apps"
+                      loading="lazy"
+                    />
+                  </button>
+
+                  <div class="project-info">
+                    <span class="project-tag">
+                      Microsoft Power Apps | SharePoint
+                    </span>
+
+                    <h4>Flashcard App</h4>
+
+                    <p>
+                      An application that displays questions stored in
+                      SharePoint.
+                    </p>
+                  </div>
+                </article>
+
+                <!-- <article class="project-card coming-soon-card">
+                  <div class="coming-icon">+</div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Coming Soon</span>
+
+                    <h4>Project 03</h4>
+
+                    <p>
+                      Currently exploring and learning more about Power Apps.
+                    </p>
+                  </div>
+                </article> -->
+
+                <!-- <article class="project-card coming-soon-card">
+                  <div class="coming-icon">+</div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Coming Soon</span>
+
+                    <h4>Project 04</h4>
+
+                    <p>New projects will be added soon.</p>
+                  </div>
+                </article> -->
+
+                <!-- <article class="project-card coming-soon-card">
+                  <div class="coming-icon">+</div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Coming Soon</span>
+
+                    <h4>Project 05</h4>
+
+                    <p>Currently studying Microsoft Power Apps.</p>
+                  </div>
+                </article> -->
+
+                <!-- <article class="project-card coming-soon-card">
+                  <div class="coming-icon">+</div>
+
+                  <div class="project-info">
+                    <span class="project-tag">Coming Soon</span>
+
+                    <h4>Project 06</h4>
+
+                    <p>New projects will be added soon.</p>
+                  </div>
+                </article> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section
         class="portfolio-section timeline-section"
         id="timeline"
-        data-index="3"
-        aria-label="Timeline"
+        aria-label="My Journey"
       >
         <div class="section-content timeline-content">
           <div class="timeline-header">
-            <span class="section-number">04 / 05</span>
-
             <h2>
               My
               <span>Journey</span>
@@ -579,7 +803,6 @@
           </div>
 
           <div class="timeline-grid">
-            <!-- TIMELINE CARD 1 -->
             <article class="timeline-card timeline-card-large">
               <div class="timeline-year">2023</div>
 
@@ -600,7 +823,6 @@
               </div>
             </article>
 
-            <!-- TIMELINE CARD 2 -->
             <article class="timeline-card">
               <div class="timeline-year">2023</div>
 
@@ -621,7 +843,6 @@
               </div>
             </article>
 
-            <!-- TIMELINE CARD 3 -->
             <article class="timeline-card timeline-current">
               <div class="timeline-year">2025</div>
 
@@ -636,37 +857,32 @@
                 <p class="timeline-role">Web Designer</p>
 
                 <p>
-                  Creating, designing and maintaining modern websites while continuing to
-                  grow as a designer and developer.
+                  Creating, designing, and maintaining modern websites while
+                  continuing to grow as a designer and developer.
                 </p>
               </div>
             </article>
-
-            
           </div>
 
           <div class="timeline-footer">
             <span>KEEP LEARNING</span>
+
             <span class="footer-line"></span>
+
             <span>KEEP BUILDING</span>
           </div>
         </div>
       </section>
 
-      <!-- =====================================================
-             CONTACT
-        ====================================================== -->
       <section
         class="portfolio-section contact-section"
         id="contact"
-        data-index="4"
         aria-label="Contact"
       >
         <div class="contact-glow"></div>
 
         <div class="section-content contact-content">
           <div class="contact-top">
-            <span class="section-number">05 / 05</span>
             <span class="contact-location">PHILIPPINES</span>
           </div>
 
@@ -686,9 +902,11 @@
             <div class="contact-links">
               <a href="mailto:thebenjangeles@gmail.com" class="contact-link">
                 <span class="contact-link-label">EMAIL</span>
+
                 <span class="contact-link-value">
                   thebenjangeles@gmail.com
                 </span>
+
                 <span class="contact-arrow">↗</span>
               </a>
 
@@ -699,18 +917,26 @@
                 class="contact-link"
               >
                 <span class="contact-link-label">GITHUB</span>
-                <span class="contact-link-value"> https://github.com/thebenjieangeles </span>
+
+                <span class="contact-link-value">
+                  github.com/thebenjieangeles
+                </span>
+
                 <span class="contact-arrow">↗</span>
               </a>
 
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/benjiegilangeles"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="contact-link"
               >
                 <span class="contact-link-label">LINKEDIN</span>
-                <span class="contact-link-value"> www.linkedin.com/in/benjiegilangeles </span>
+
+                <span class="contact-link-value">
+                  linkedin.com/in/benjiegilangeles
+                </span>
+
                 <span class="contact-arrow">↗</span>
               </a>
             </div>
@@ -723,12 +949,34 @@
 
           <div class="contact-footer">
             <span>BENJIE ANGELES</span>
+
             <span>WEB DEVELOPER &amp; WEB DESIGNER</span>
+
             <span>© 2026</span>
           </div>
         </div>
       </section>
     </main>
+
+    <dialog
+      class="image-lightbox"
+      id="imageLightbox"
+      aria-label="Project image preview"
+    >
+      <button
+        type="button"
+        class="lightbox-close"
+        aria-label="Close image preview"
+      >
+        &times;
+      </button>
+
+      <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImage" />
+
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+      </div>
+    </dialog>
 
     <script src="script.js"></script>
   </body>
